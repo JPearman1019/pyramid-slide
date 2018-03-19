@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+        .header {
+            background-color: #784767;
+            color: #F5F5F5;
+            text-align: center;
+            margin: 0px;
+            padding: 50px;
+        }
+        .pyramid-div {
+            margin: auto;
+            width: 50%;
+            border: 3px solid #784767;
+            
+        }
+        .pyramid-control {
+            background-color: #C0C0C0;
+            background: #C0C0C0;
+            margin: 0;
+            padding: 30px;
+            padding-left: 100px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .pyramid-control>* {
+            flex: 1 0 auto;
+        }
+        .select-control {
+            width: 10px;
+        }
+        .slider {
+        
+        }
+        .pyramid-container {
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+        }
+        .pyramid {
+            line-height: 0;            
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+            color: #784767
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1 class="header">Pyramid Slide</h1>
+    </p>
+    <div class="pyramid-div">
+        <div class="pyramid-control">
+            Brick Symbol
+            <div class="select-control">
+                <select id="pyramidSymbol">
+                    <option value="0">#</option>            
+                    <option value="1">@</option>
+                    <option value="2">X</option>
+                    <option value="3">$</option>
+                </select>
+            </div>
+            <form class="slider">How high?
+                <input type="range" name="points" min="1" max="20" value="10" id="sliderRange">
+                <span id="rangeOut"></span>
+            </form>
+        </div>
+        <div class="pyramid-container">
+            <p class="pyramid" id="pyramid"></p>
+        </div>
+    </div>
+    <script src="pyramid-slide.js"></script>
+</body>
+</html>
